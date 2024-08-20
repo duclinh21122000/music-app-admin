@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [App Skeleton]
 
-## Getting Started
+Aoo-Skeleton based on React JS and Next JS Framework.
 
-First, run the development server:
+## ✨ Features 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Typescript**
+- **React JS + Next JS 14**
+- **TailwindCss + Headlessui**
+- **Redux Toolkit, Redux Toolkit Query**
+- **Testing**
+
+## 🔨 Prerequisites
+
+    git --version
+    # 2.40.1
+    node --version
+    # v17.3.0
+    yarn --version
+    # 1.22.17
+
+## 📦 Run scripts
+
+Install packages:
+
+    yarn
+
+Start development:
+
+    yarn dev
+
+Run all test cases:
+
+    yarn test
+
+## 🖥 Code Structure
+
+```shell
+.
+├── README.md                                           # README file
+├── .husky                                              # Husky configuration
+├── .vscode                                             # VSCode configuration
+├── public                                              # Public assets folder
+├── src
+│   ├── app                                             # The app folder contains all the project's pages
+│   │   ├─── login                                      # Login Page
+│   │   │    ├─── layout.tsx     
+│   │   │    ├─── page.tsx   
+│   │   ├─── homepage                                   # Home Page
+│   │   │    ├─── layout.tsx     
+│   │   │    ├─── page.tsx   
+│   ├── components                                      # Components
+│   │   ├─── common                                     # Common components
+│   │   │    ├─── Button         
+│   │   │    ├─── Input          
+│   │   │    ├─── ...         
+│   │   ├─── layouts                                    # Layout components
+│   │   │    ├─── Header     
+│   │   │    ├─── Footer
+│   │   │    ├─── ...        
+│   ├── features                                        # Feature contain components related to the features of the application
+│   │   ├─── authentication                             # Authentication feature
+│   │   │    ├─── components                            # Auth Components
+│   │   │    │    ├─── login                            # Login
+│   │   │    │    │    ├─── Login.tsx                   # Auth Component
+│   │   │    │    │    ├─── LoginContainer.tsx          # Auth Container connecting a React component to the Redux store
+│   │   │    │    ├─── register                         # Login
+│   │   │    │    │    ├─── Register.tsx                 
+│   │   │    │    │    ├─── RegisterContainer.tsx       
+│   │   │    ├─── authSlice.tsx                         # Auth Slice configuration
+│   │   ├─── ...                                        # Other feature
+│   ├── services                                        # Request API
+│   │   ├─── api                                        # Api configuration
+│   │   │    ├─── api.ts               
+│   │   │    ├─── auth.ts               
+│   │   │    ├─── ...                                   # Other Api configuration
+│   │   ├─── models                                     # List API interfaces
+│   │   │    ├─── IUser.ts              
+│   │   │    ├─── ILoginRequest.ts      
+│   │   │    ├─── ...                   
+│   │   ├─── helpers                                    # Helper functions
+│   ├── stores                                          # Redux store
+│   │   ├─── button    
+│   │   │    ├─── Button.stories.ts           
+│   │   ├─── input    
+│   │   │    ├─── Input.stories.ts       
+│   │   ├─── ...    
+│   ├── styles                                          # Global styles
+│   ├── tests                                           # Test
+│   ├── utils                                           # Utility functions, constants, config,...
+├── .eslintrc.json              
+├── .prettierrc.json
+├── next.config.js                                      # NextJS configuration
+├── postcss.config.js   
+├── tailwind.config.js                                  # Tailwind configuration
+└── tsconfig.json                                       # TypeScript configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🖥 Environment Support
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Modern browsers and Internet Explorer 11
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari |
+| --- | --- | --- | --- |
+| IE11, Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
-## Learn More
+## 📙 Technical Documents
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- React Design Patterns and Best Practices: https://www.packtpub.com/product/react-design-patterns-and-best-practices/9781786464538
+- Next JS: https://nextjs.org/docs
+- Tailwind: https://tailwindcss.com/docs/installation
+- JestJs - testing framework: https://jestjs.io/docs/getting-started
+- @testing-library: https://testing-library.com/docs/

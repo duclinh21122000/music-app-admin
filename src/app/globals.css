@@ -2,28 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer components {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  input[type='search']::-webkit-search-cancel-button,
+  input[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input::placeholder {
+    color: var(--text-500);
+  }
+
+  input:-webkit-autofill,
+  input:focus:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px var(--bg-secondary) inset;
+  }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .mini-scrollbar::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #e0e4e9;
+    border-radius: 8px;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --primary-color: #437223;
+  --secondary-color: #FFDE81;
+
+  /* color gray */
+  --gray-200: #e3e8ef;
+
+  /* border */
+  --border-primary: #666666;
+  --border-200: var(--gray-200);
+
+  /* text */
+  --text-primary: #3F3F3F;
+  --text-secondary: #2C1001;
+
+  --header-height: 60px;
+  --sidebar-width: 260px;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #fff
 }
 
 @layer utilities {
