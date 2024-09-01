@@ -5,10 +5,10 @@ export interface IMenuItem {
   title: string
   path: string
   icon?: React.ReactElement
-  subMenu?: ISubmenuItem[]
+  subMenu?: ISubMenuItem[]
 }
 
-interface ISubmenuItem {
+export interface ISubMenuItem {
   key: number
   title: string
   path: string
